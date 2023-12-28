@@ -8,7 +8,7 @@ from the cluster which has highest average goals per game.
 
 Data is from [NHL offical website](https://www.nhl.com/stats/teams). Data has statistics on the games played and goals for and against.
 
-**Example of data**
+**Data**
 
 |    | Team                  |   Season |   GP |   W |   L | T   |   OT |   P |    P% |   RW |   ROW |   S/O Win |   GF |   GA |   GF/GP |   GA/GP |   PP% |   PK% |   Net PP% |   Net PK% |   Shots/GP |   SA/GP |   FOW% |
 |---:|:----------------------|---------:|-----:|----:|----:|:----|-----:|----:|------:|-----:|------:|----------:|-----:|-----:|--------:|--------:|------:|------:|----------:|----------:|-----------:|--------:|-------:|
@@ -60,7 +60,7 @@ Preprocessing for the data was to remove unnecessary variables and set Team as i
 9. ROW
 Since they carry no information on how the team plays. For example GP (Games played) only tells about the schedule of that team.
 
-**Example data after variable elimination**
+**Data after variable elimination**
 
 | Team                  |    P% |   GF/GP |   GA/GP |   PP% |   PK% |   Net PP% |   Net PK% |   Shots/GP |   SA/GP |   FOW% |
 |:----------------------|------:|--------:|--------:|------:|------:|----------:|----------:|-----------:|--------:|-------:|
@@ -115,7 +115,7 @@ From the plot value of k was chosen to be 4.
 
 K-means clustering was done using sklearn library with k of 4 and initial value of 10. Results for the cluster were added to the dataframe
 
-**Example Data with clusters**\
+**Data with clusters**\
 | Team                  |   Cluster |    P% |   GF/GP |   GA/GP |   PP% |   PK% |   Net PP% |   Net PK% |   Shots/GP |   SA/GP |   FOW% |
 |:----------------------|----------:|------:|--------:|--------:|------:|------:|----------:|----------:|-----------:|--------:|-------:|
 | Vancouver Canucks     |         1 | 0.7   |    3.86 |    2.51 |  24.2 |  77.8 |      24.2 |      81.5 |       28   |    30   |   50.7 |
@@ -168,7 +168,7 @@ Algorithm for the search was set to "auto" and distance used was eucledian dista
 
 These closest teams and the distance to them were added to the data.
 
-**Example Data with closest team and distance**\
+**Data with closest team and distance**\
 | Team                  |   Cluster | Closest team         |   Closest Distance |    P% |   GF/GP |   GA/GP |   PP% |   PK% |   Net PP% |   Net PK% |   Shots/GP |   SA/GP |   FOW% |
 |:----------------------|----------:|:---------------------|-------------------:|------:|--------:|--------:|------:|------:|----------:|----------:|-----------:|--------:|-------:|
 | Vancouver Canucks     |         1 | Anaheim Ducks        |            6.05589 | 0.7   |    3.86 |    2.51 |  24.2 |  77.8 |      24.2 |      81.5 |       28   |    30   |   50.7 |
