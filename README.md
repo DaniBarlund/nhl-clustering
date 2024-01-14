@@ -4,6 +4,17 @@ Idea is to use data from 2023-2024 seasons statistics and group teams into clust
 After clustering we can find the teams you might enjoy the most. For example if you like to see goals then teams for you would be
 from the cluster which has highest average goals per game.
 
+## Table of contents
+
+- [Data](#Data)
+- [Preprocessing](#Preprocessing)
+- [Clustering](#Clustering)
+- [Selection of K](#Selection of K)
+- [K-means with K=4](#K-means with K=4)
+- [Finding the most similar team using NearestNeighbor search](#Finding the most similar team using NearestNeighbor search)
+- [Finding teams with the highest average goals for and against](#Finding teams with the highest average goals for and against)
+- [Conclusion](#Conclusion)
+
 ## Data
 
 Data is from [NHL offical website](https://www.nhl.com/stats/teams). Data has statistics on the games played and goals for and against.
